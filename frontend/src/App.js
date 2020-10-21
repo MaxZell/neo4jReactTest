@@ -27,7 +27,12 @@ class App extends Component {
   // };
 
   handleSubmit = async e => {
-    e.preventDefault();
+    /*
+		ToDo catch server disconnection
+	*/
+	if(e){
+		e.preventDefault();
+	}
     const response = await fetch('/db/neo4j', {
       method: 'POST',
       headers: {
